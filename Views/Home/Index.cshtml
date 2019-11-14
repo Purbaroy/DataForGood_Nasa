@@ -1,0 +1,329 @@
+﻿
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<link href="~/Content/css.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+<script href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script href="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+
+<script>
+
+    function now() {
+
+        document.getElementById('now').style.display = 'block';
+        $("#later").hide();
+        $("#idea").hide();
+        $("#idea1").hide();
+        $("#idea2").hide();
+        $("#idea3").hide();
+        $("#idea4").hide();
+        $("#idea5").hide();
+        $("#idea6").hide();
+        $("#last").hide();
+    }
+
+    function later() {
+
+
+        document.getElementById("later").style.display = 'block';
+
+        $("#now").hide();
+        $("#idea").hide();
+        $("#idea1").hide();
+        $("#idea2").hide();
+        $("#idea3").hide();
+        $("#idea4").hide();
+        $("#idea5").hide();
+        $("#idea6").hide();
+        $("#last").hide();
+
+    }
+    function hey() {
+
+        document.getElementById("idea").style.display = 'block';
+        document.getElementById("idea1").style.display = 'block';
+        document.getElementById("idea2").style.display = 'block';
+        document.getElementById("idea3").style.display = 'block';
+        document.getElementById("idea4").style.display = 'block';
+        document.getElementById("idea5").style.display = 'block';
+        document.getElementById("idea6").style.display = 'block';
+
+        $("#later").hide();
+        $("#now").hide();
+
+    }
+    function yes() {
+        document.getElementById("idea").style.display = 'block';
+        document.getElementById("idea1").style.display = 'block';
+        document.getElementById("idea2").style.display = 'block';
+        document.getElementById("idea3").style.display = 'block';
+        document.getElementById("idea4").style.display = 'block';
+        document.getElementById("idea5").style.display = 'block';
+        document.getElementById("idea6").style.display = 'block';
+        document.getElementById("last").style.display = 'block';
+        $("#later").hide();
+        $("#now").hide();
+    }
+    function myFunction() {
+        location.href = "nasa.html";
+
+    }
+
+
+    //radar
+
+
+    //radar
+
+</script>
+<style>
+    #container {
+        margin: 0 auto;
+        max-width: 400px;
+        min-width: 380px;
+    }
+    .bg {
+  /* The image used */
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+
+  /* Half height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .bgc {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+}
+</style>
+<div class="vertical-nav bg-white" id="sidebar">
+    <div class="py-4 px-3 mb-4 bg-light">
+        <div class="media d-flex align-items-center">
+            <img src="~/Images/user.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+
+            <div class="media-body">
+                <h4 class="m-0">Data For Good</h4>
+                <p class="font-weight-light text-muted mb-0">Team</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+
+    <ul class="nav flex-column bg-white mb-0">
+        <li class="nav-item">
+            <a href="/Home" class="nav-link text-dark font-italic bg-light">
+                <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/Home" class="nav-link text-dark font-italic">
+                <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                About
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                Services
+            </a>
+        </li>
+       
+    </ul>
+
+    <p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Charts</p>
+
+    <ul class="nav flex-column bg-white mb-0">
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
+                Area Quality
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+                Water Management
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
+                Go Green
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark font-italic">
+                <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                Garbage Disposal
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- End vertical navbar -->
+<!-- Page content holder -->
+<div id="content">
+    <!-- Toggle button -->
+    <!-- Demo content -->
+    <div class="col-md-4">
+        <h2></h2>
+    </div>
+    <div class="col-md-3">
+        <h2></h2>
+    </div>
+    <div class="col-md-4">
+
+        <h2 id="idea" style="display:none">Pick your monthly task!</h2>
+    </div>
+   
+    <br />
+    <br />
+    @*<p class="lead">
+            Snippet by <a href="https://bootstrapious.com/snippets" class="text-white">
+                <u>Bootstrapious</u>
+            </a>
+        </p>*@
+    <div>
+        <div class="col-md-6">
+
+
+            <button id="sidebarCollapse" type="button" style="width:150px; height:150px" onclick="now()" class=" bgc btn bg-white rounded-pill shadow-sm px-4 mb-4">
+                <i class="fa fa-bars mr-2"></i>
+                <small class="text-uppercase font-weight-bold">What Has Happened?</small>
+
+            </button>
+            &nbsp; &nbsp; &nbsp;
+            <button id="sidebarCollapse" type="button" style="width:150px; height:150px" onclick="later()" class="btn bg-white rounded-pill shadow-sm px-4 mb-4">
+                <i class="fa fa-bars mr-2"></i>
+                <small class="text-uppercase font-weight-bold">What will Happen</small>
+                <br />
+
+                <small class="text-uppercase font-weight-bold">in the next 80 years?</small>
+            </button>
+            &nbsp; &nbsp; &nbsp;
+            <button id="sidebarCollapse" type="button" style="width:150px; height:150px" onclick="hey()" class="btn bg-white rounded-pill shadow-sm px-4 mb-4">
+                <i class="fa fa-bars mr-2"></i>
+                <small class="text-uppercase font-weight-bold">What should we do?</small>
+
+            </button>
+
+
+
+            &nbsp; &nbsp; &nbsp;
+
+        </div>
+
+
+        <div id="idea2" class="col-md-6" style="display:none">
+
+
+            <br />
+
+
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <big style="width:150px; height:150px" class="text-uppercase font-weight-bold bg-white rounded-pill shadow-sm px-4 mb-4">Air Quality</big>
+            &nbsp; &nbsp;
+            <big class="text-uppercase font-weight-bold bg-white rounded-pill shadow-sm px-4 mb-4">Water Management</big>
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <br />
+            <br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <big class="text-uppercase font-weight-bold bg-white rounded-pill shadow-sm px-4 mb-4">Go Green</big>
+            &nbsp; &nbsp;
+            <big class="text-uppercase font-weight-bold bg-white rounded-pill shadow-sm px-4 mb-4">Garbage Disposal</big>
+            <br />
+            <br />
+        </div>
+        <br>
+    </div>
+    <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="separator"></div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6">
+
+                    <h2 id="idea1" class="bg-white p-5 rounded my-5 shadow-sm" style="display:none;">
+                        Based on our monthly analysis and your current location: King County, your task of the month is:
+
+                    </h2>
+                    <div id="idea3" class=" bg-white p-5 rounded my-5 shadow-sm" style="display:none;">
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; Let's carpool today! <img style="width:60px; height:50px" src="~/Images/carpool.png" /></h2>
+
+
+                    </div>
+                    <img id="now" src="~/Images/current.jpg" style="display:none; block; width:600px;height:350px" />
+                    <img id="later" src="~/Images/later.jpg" style="display:none; block; width:600px;height:350px" />
+
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+
+                    <h2 id="idea4" class="p-5 rounded my-5 shadow-sm" style="display:none;">
+                        Achieved your goal?
+
+                    </h2>
+                    &nbsp;&nbsp;
+                    <div class="col-md-3">
+
+                        <button id="idea5" type="button" style="width: 90px; height: 90px; display: none;" onclick="yes()" class="btn-success rounded-pill shadow-sm px-4 mb-4">
+
+                            <p class="text-uppercase font-weight-bold">Yes</p>
+
+
+                        </button>
+
+                    </div>
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-3">
+                        <button id="idea6" type="button" style="width: 90px; height: 90px; display: none; " onclick="now()" class="btn-danger rounded-pill shadow-sm px-4 mb-4">
+
+                            <p class="text-uppercase font-weight-bold">No</p>
+
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h2 id="last" style="display:none;">
+                        You have contributed 1.25% towards Seattle air quality improvement! Congratulations on being a responsible citizen!
+
+                    </h2>
+                </div>
+
+            </div>
+            <div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- End demo content -->
